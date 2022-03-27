@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>devrazec</name>
+	<displayName><![CDATA[Devrazec]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Devrazec module helps the business in a way that everything can be kept organized in one place.]]></description>
+	<author><![CDATA[Devrazec <https://devrazec.com/>]]></author>
+	<tab><![CDATA[administration]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>
