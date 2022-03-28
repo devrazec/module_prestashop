@@ -11,7 +11,7 @@
 
 
 // Get data from different sources inside or outside of Prestashop
-class GetDataClass extends ObjectModel
+class DevrazecGetDataClass extends ObjectModel
 {
     // Customer
     public function getCustomerDataById($id_customer)

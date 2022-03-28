@@ -9,7 +9,7 @@
  *  @license   MIT
  */
 
-class TestClass extends ObjectModel
+class DevrazecTestClass extends ObjectModel
 {
    
 

@@ -42,38 +42,38 @@ class Devrazec extends Module
         $this->menu = array(       
             array(  
                 'active' => 1,
-                'class_name' => 'Setting',
+                'class_name' => 'DevrazecSetting',
                 'name' => 'Setting',
                 'id_parent' => 'Devrazec',
                 'module' => 'devrazec',
-                'position' => 2,
+                'position' => 1,
                 'icon' => 'settings',
             ),
             array(     
                 'active' => 1,
-                'class_name' => 'Product',
+                'class_name' => 'DevrazecProduct',
                 'name' => 'Product',
                 'id_parent' => 'Devrazec',
                 'module' => 'devrazec',
-                'position' => 3,
+                'position' => 2,
                 'icon' => 'shopping_basket',
             ),
             array(    
                 'active' => 1,
-                'class_name' => 'Category',
+                'class_name' => 'DevrazecCategory',
                 'name' => 'Category',
                 'id_parent' => 'Devrazec',
                 'module' => 'devrazec',
-                'position' => 4,
+                'position' => 3,
                 'icon'   => 'store',
             ),
             array(      
-                'active' => 0,
-                'class_name' => 'Test',
+                'active' => 1,
+                'class_name' => 'DevrazecTest',
                 'name' => 'Test',
                 'id_parent' => 'Devrazec',              
                 'module' => 'devrazec',
-                'position' => 5,
+                'position' => 4,
                 'icon' => 'star',
             )
         );
@@ -106,6 +106,8 @@ class Devrazec extends Module
      */
     public function addMenu()
     {     
+        $last_menu = Db::getInstance()->getRow("SELECT position FROM `" . _DB_PREFIX_ . "tab` ORDER BY position DESC");
+
         $tabid = Tab::getIdFromClassName('Devrazec');
         
         $tab = new Tab();
@@ -117,7 +119,7 @@ class Devrazec extends Module
         }
         $tab->id_parent = 0;
         $tab->module = $this->name;
-        $tab->position = 1;
+        $tab->position = (int)$last_menu['position'] += 1;
 
         if ($tabid !== false) {
             $tab->id = (int)$tabid;

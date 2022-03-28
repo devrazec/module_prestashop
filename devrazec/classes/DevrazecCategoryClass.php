@@ -9,7 +9,7 @@
  *  @license   MIT
  */
 
-class ProductClass extends ObjectModel
+class DevrazecCategoryClass extends ObjectModel
 {
    
 }

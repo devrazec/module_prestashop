@@ -9,7 +9,7 @@
  *  @license   MIT
  */
 
-class SettingClass extends ObjectModel
+class DevrazecSettingClass extends ObjectModel
 {
    
 }

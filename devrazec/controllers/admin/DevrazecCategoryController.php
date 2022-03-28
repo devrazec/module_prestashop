@@ -9,7 +9,7 @@
  *  @license   MIT
  */
 
-class ProductController extends ModuleAdminController
+class DevrazecCategoryController extends ModuleAdminController
 {
     public function __construct()   {
         $this->bootstrap = true;
@@ -23,7 +23,7 @@ class ProductController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Product. 
+                    Page Category. 
                 </p>';
        
         $this->content = $htm;

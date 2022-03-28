@@ -9,7 +9,7 @@
  *  @license   MIT
  */
 
-class SettingController extends ModuleAdminController
+class DevrazecTestController extends ModuleAdminController
 {
     public function __construct()   {
         $this->bootstrap = true;
@@ -23,7 +23,7 @@ class SettingController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Setting. 
+                    Page Test. 
                 </p>';
        
         $this->content = $htm;
