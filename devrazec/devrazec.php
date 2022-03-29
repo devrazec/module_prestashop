@@ -100,13 +100,26 @@ class Devrazec extends Module
         return parent::uninstall() &&
             $this->removeMenu();
     }
+
+    /**
+     * Get last menu
+     */
+    public function getLastMenu()
+     {
+         $last_menu = Db::getInstance()->getRow("SELECT position FROM `" . _DB_PREFIX_ . "tab` ORDER BY position DESC");
+                
+         if ($last_menu) {
+             return $last_menu;
+         }
+         return false;
+     }
     
     /**
      * Add Menu when install Module
      */
     public function addMenu()
     {     
-        $last_menu = Db::getInstance()->getRow("SELECT position FROM `" . _DB_PREFIX_ . "tab` ORDER BY position DESC");
+        $last_menu = self::getLastMenu();
 
         $tabid = Tab::getIdFromClassName('Devrazec');
         
@@ -120,6 +133,7 @@ class Devrazec extends Module
         $tab->id_parent = 0;
         $tab->module = $this->name;
         $tab->position = (int)$last_menu['position'] += 1;
+        $tab->icon = 'store';
 
         if ($tabid !== false) {
             $tab->id = (int)$tabid;
