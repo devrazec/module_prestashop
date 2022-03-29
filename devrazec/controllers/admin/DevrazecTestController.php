@@ -23,7 +23,7 @@ class DevrazecTestController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Test. 
+                    Page Admin Devrazec Test. 
                 </p>';
        
         $this->content = $htm;

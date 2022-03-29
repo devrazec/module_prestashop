@@ -74,7 +74,7 @@ class Devrazec extends Module
                 'id_parent' => 'Devrazec',              
                 'module' => 'devrazec',
                 'position' => 4,
-                'icon' => 'star',
+                'icon' => 'desktop_mac',
             )
         );
     }

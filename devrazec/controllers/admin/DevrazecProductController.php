@@ -23,7 +23,7 @@ class DevrazecProductController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Product. 
+                    Page Admin Devrazec Product. 
                 </p>';
        
         $this->content = $htm;

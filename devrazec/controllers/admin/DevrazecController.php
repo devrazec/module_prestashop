@@ -23,7 +23,7 @@ class DevrazecController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Setting. 
+                    Page Admin Devrazec Setting. 
                 </p>';
        
         $this->content = $htm;

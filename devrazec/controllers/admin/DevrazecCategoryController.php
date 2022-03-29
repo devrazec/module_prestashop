@@ -23,7 +23,7 @@ class DevrazecCategoryController extends ModuleAdminController
     public function initContent()
     {
         $htm = '<p>
-                    Page Category. 
+                    Page Admin Devrazec Category. 
                 </p>';
        
         $this->content = $htm;
