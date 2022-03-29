@@ -106,7 +106,7 @@ class Devrazec extends Module
      */
     public function getLastMenu()
      {
-         $last_menu = Db::getInstance()->getRow("SELECT position FROM `" . _DB_PREFIX_ . "tab` ORDER BY position DESC");
+         $last_menu = Db::getInstance()->getRow("SELECT position FROM `" . _DB_PREFIX_ . "tab` WHERE id_parent = 0 ORDER BY position DESC");
                 
          if ($last_menu) {
              return $last_menu;
